@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Fine-tuned Distilled Roberta for question answering</title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+    <div class=" col-12">
+    <h1>Distilled Roberta Classifier for Question Answering</h1>
+        <form name="form", method="POST", style="text-align: center;">
+            <br>
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Context </span>
+              </div>
+              <input name="text_inputs" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
+              placeholder="Enter your context text here." required>
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Question</span>
+              </div>
+              <input name="text_inputs" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
+              placeholder="Enter your question here." required>
+            </div>
+            <br>
+            <button value="Submit" class="btn btn-success btn-lg btn-block">Run</button>
+        </form>
+    <br>
+    <div class="card">
+      <div class="card-header">
+        Required answer is:
+      </div>
+      <div class="card-body">
+        <h5 style="text-align: center;" class="card-title">{{output}}</h5>
+          <h4 style="text-align: center;">{{ score }}</h4>
+
+      </div>
+    </div>
+    </div>
+
+    </body>
+</html>
