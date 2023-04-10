@@ -14,8 +14,6 @@ question_answerer= pipeline("question-answering", model=model_checkpoint)
 # Main function here
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    context=""
-    question=""
     answer=""
     score=0
     # If a form is submitted
@@ -24,8 +22,8 @@ def main():
         context = request.form.get("context_inputs")
         question = request.form.get("question_inputs")
 
-        context = str(input("please input your context!:"))
-        question = str(input("please input your question:"))
+        # context = str(input("please input your context!:"))
+        # question = str(input("please input your question:"))
 
         result = question_answerer(question=question, context=context, handle_impossible_answer=True)
         answer = result['answer']
